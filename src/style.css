@@ -64,3 +64,10 @@ form div{
     display: none;
     color:var(--red);
 }
+#submit-button{
+    background-color: var(--green-600);
+    color:var(--white);
+    font-weight: 700;
+    padding: 15px 0;
+    border: none;
+}
