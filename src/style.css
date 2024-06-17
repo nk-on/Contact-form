@@ -60,3 +60,7 @@ form div{
 .name-container input{
     height: 20px;
 }
+.error-message{
+    display: none;
+    color:var(--red);
+}
