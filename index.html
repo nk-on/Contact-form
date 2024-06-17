@@ -17,7 +17,34 @@
   </head>
   <body>
     <main class="container">
-      <h1>Contact us</h1>
+      <h1>Contact Us</h1>
+      <form>
+        <div class="name-container">
+          <div class="first-name-container">
+            <label for="first-name">First Name *</label>
+            <input type="text" name="first-name" id="first-name">
+          </div>
+         <div class="last-name-container">
+           <label for="last-name">Last Name *</label>
+          <input type="text" name="first-name" id="first-name">
+         </div>
+        </div>
+        <div class="email-container">
+          <label for="Email">Email*</label>
+          <input type="email" name="Email" id="Email">
+        </div>
+        <div class="radio-buttons">
+          <div class="radio-container general-container">
+            <input type="radio" id = "general">
+            <label for="general">General inquiry</label>
+          </div>
+          <div class="radio-container support-container">
+            <input type="radio" id = "support">
+            <label for="general">Support inquiry</label>
+          </div>
+        </div>
+        <textarea name="description" rows="5" cols="40"></textarea>
+      </form>
     </main>
     <div class="attribution">
       Challenge by

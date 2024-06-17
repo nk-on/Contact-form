@@ -22,12 +22,41 @@ body{
     align-items: center;
 }
 .container{
+    padding: 30px 20px;
     border-radius: 5px;
     background-color: var(--white);
     width: min(500px,90%);
-    height: 700px;
     box-sizing:  6px 7px 5px 0px rgba(0,0,0,0.75);
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+}
+form div{
+    display: flex;
+    flex-direction: column;
 }
 .container h1{
     font-weight: 400;
+}
+.name-container{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+.radio-buttons{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.radio-container{
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    border: 2px solid var(--grey-500);
+}
+.name-container input{
+    height: 20px;
 }
