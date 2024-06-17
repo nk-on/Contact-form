@@ -13,6 +13,7 @@
   --grey-900: hsl(187, 24%, 22%);
 }
 body{
+    font-family: "Karla", sans-serif;
     background-color: var(--green-200);
     height: 100vh;
     display: flex;
@@ -26,4 +27,7 @@ body{
     width: min(500px,90%);
     height: 700px;
     box-sizing:  6px 7px 5px 0px rgba(0,0,0,0.75);
+}
+.container h1{
+    font-weight: 400;
 }
