@@ -12,3 +12,18 @@
   --grey-500: hsl(186, 15%, 59%);
   --grey-900: hsl(187, 24%, 22%);
 }
+body{
+    background-color: var(--green-200);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    border-radius: 5px;
+    background-color: var(--white);
+    width: min(500px,90%);
+    height: 700px;
+    box-sizing:  6px 7px 5px 0px rgba(0,0,0,0.75);
+}
