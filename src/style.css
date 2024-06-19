@@ -22,11 +22,15 @@ body {
   align-items: center;
 }
 .container {
+  color:var(--grey-900);
   padding: 30px 20px;
   border-radius: 5px;
   background-color: var(--white);
   width: min(500px, 90%);
   box-sizing: 6px 7px 5px 0px rgba(0, 0, 0, 0.75);
+}
+h1{
+    font-weight: 800;
 }
 form {
   display: flex;
@@ -61,9 +65,10 @@ form div {
   justify-content: space-around;
 }
 .radio-container {
-  padding: 20px;
   display: flex;
   flex-direction: row;
+  gap:10px;
+  padding: 10px 60px;
 }
 .query-container {
   display: flex;
@@ -89,7 +94,7 @@ form div {
         display: flex;
         flex-direction: column;
     }
-    main{
+    .container{
         display: flex;
         flex-direction: column;
     }
