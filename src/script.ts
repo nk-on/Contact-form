@@ -8,7 +8,14 @@ const emailErrorMessege = document.querySelector('#error-message-email') as HTML
 const generalQuery = document.querySelector('#general') as HTMLInputElement;
 const supportQuery = document.querySelector('#support') as HTMLInputElement;
 const queryErrorMessege = document.querySelectorAll<HTMLLabelElement>('.error-message-query');
-function checkQuery():void {
+const descriptionArea = document.querySelector('#description') as HTMLTextAreaElement;
+const descriptionErrorArea = document.querySelector('#description-error-messege') as HTMLLabelElement;
+function checkDescription(): void {
+    if (descriptionArea.value === '') {
+        descriptionErrorArea.style.display = 'block'
+    }
+}
+function checkQuery(): void {
     if (generalQuery.checked === false && supportQuery.checked === false) {
         queryErrorMessege.forEach((element) => element.style.display = 'block');
     }
@@ -20,6 +27,7 @@ function checkEmail(): void {
 }
 function checkInput(e: any): void {
     e.preventDefault();
+    checkDescription();
     checkQuery();
     checkEmail();
     firstNameInput.value === '' ? firstNameErrorMessage.style.display = 'block' : firstNameErrorMessage.style.display = 'none';

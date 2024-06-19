@@ -9,6 +9,13 @@ const emailErrorMessege = document.querySelector('#error-message-email');
 const generalQuery = document.querySelector('#general');
 const supportQuery = document.querySelector('#support');
 const queryErrorMessege = document.querySelectorAll('.error-message-query');
+const descriptionArea = document.querySelector('#description');
+const descriptionErrorArea = document.querySelector('#description-error-messege');
+function checkDescription() {
+    if (descriptionArea.value === '') {
+        descriptionErrorArea.style.display = 'block';
+    }
+}
 function checkQuery() {
     if (generalQuery.checked === false && supportQuery.checked === false) {
         queryErrorMessege.forEach((element) => element.style.display = 'block');
@@ -21,6 +28,7 @@ function checkEmail() {
 }
 function checkInput(e) {
     e.preventDefault();
+    checkDescription();
     checkQuery();
     checkEmail();
     firstNameInput.value === '' ? firstNameErrorMessage.style.display = 'block' : firstNameErrorMessage.style.display = 'none';
