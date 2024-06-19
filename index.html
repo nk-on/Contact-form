@@ -1,55 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
 
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./assets/images/favicon-32x32.png"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- displays site properly based on user's device -->
 
-    <title>Frontend Mentor | Contact form</title>
-    <link rel="stylesheet" href="src/style.css" />
-  </head>
-  <body>
-    <main class="container">
-      <h1>Contact Us</h1>
-      <form>
-        <div class="name-container">
-          <div class="first-name-container">
-            <label for="first-name">First Name *</label>
-            <input type="text" name="first-name" id="first-name">
-          </div>
-         <div class="last-name-container">
-           <label for="last-name">Last Name *</label>
-          <input type="text" name="first-name" id="first-name">
-         </div>
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+
+  <title>Frontend Mentor | Contact form</title>
+  <link rel="stylesheet" href="src/style.css" />
+</head>
+
+<body>
+  <main class="container">
+    <h1>Contact Us</h1>
+    <form>
+      <div class="name-container">
+        <div class="first-name-container">
+          <label for="first-name">First Name *</label>
+          <input type="text" name="first-name" id="first-name" />
+          <label for="first-name" class="error-message" id="error-message-firstName">This field is required</label>
         </div>
-        <div class="email-container">
-          <label for="Email">Email*</label>
-          <input type="email" name="Email" id="Email">
+        <div class="last-name-container">
+          <label for="last-name">Last Name *</label>
+          <input type="text" name="first-name" id="last-name" />
+          <label for="last-name" class="error-message" id="error-message-lastName">This field is required</label>
         </div>
-        <div class="radio-buttons">
+      </div>
+      <div class="email-container">
+        <label for="Email">Email*</label>
+        <input type="email" name="Email" id="Email" />
+        <label for="email" class="error-message" id="error-message-email">Please enter a valid email address</label>
+      </div>
+      <div class="radio-buttons">
+        <div class="query-container">
           <div class="radio-container general-container">
-            <input type="radio" id = "general">
-            <label for="general">General inquiry</label>
+            <input type="radio" name="query" id="general" value="general" />
+            <label for="general">General query</label>
           </div>
-          <div class="radio-container support-container">
-            <input type="radio" id = "support">
-            <label for="general">Support inquiry</label>
-          </div>
+          <label for="query" class="error-message error-message-query">Please enter query type</label>
         </div>
-        <textarea name="description" rows="5" cols="40"></textarea>
-      </form>
-    </main>
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
-      Coded by <a href="#">Your Name Here</a>.
-    </div>
-  </body>
+        <div class="query-container">
+          <div class="radio-container support-container">
+            <input type="radio" name="query" id="support" value="special" />
+            <label for="support">Support query</label>
+          </div>
+          <label for="query" class="error-message error-message-query">Please enter query type</label>
+        </div>
+      </div>
+      <div class="text-area-container">
+        <textarea name="description" rows="5" cols="40" id="description"></textarea>
+        <label for="description" class="error-message" id="description-error-messege">This field is required</label>
+      </div>
+      <button type="submit" id="submit-button">Submit</button>
+    </form>
+  </main>
+  <div class="attribution">
+    Challenge by
+    <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+  <script src="dist/script.js"></script>
+</body>
+
 </html>
