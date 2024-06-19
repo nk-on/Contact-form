@@ -26,12 +26,15 @@ function checkEmail() {
     const validEmail = emailRegex.test(emailInput.value);
     validEmail ? emailErrorMessege.style.display = 'none' : emailErrorMessege.style.display = 'block';
 }
+function checkName() {
+    firstNameInput.value === '' ? firstNameErrorMessage.style.display = 'block' : firstNameErrorMessage.style.display = 'none';
+    lastNameInput.value === '' ? lastNameErrorMessege.style.display = 'block' : lastNameErrorMessege.style.display = 'none';
+}
 function checkInput(e) {
     e.preventDefault();
     checkDescription();
     checkQuery();
     checkEmail();
-    firstNameInput.value === '' ? firstNameErrorMessage.style.display = 'block' : firstNameErrorMessage.style.display = 'none';
-    lastNameInput.value === '' ? lastNameErrorMessege.style.display = 'block' : lastNameErrorMessege.style.display = 'none';
+    checkName();
 }
 submitButton.addEventListener('click', checkInput);
