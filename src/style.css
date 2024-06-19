@@ -57,6 +57,10 @@ form div{
     flex-direction: row;
     border: 2px solid var(--grey-500);
 }
+.query-container{
+    display: flex;
+    flex-direction: column;
+}
 .name-container input{
     height: 20px;
 }

@@ -6,6 +6,14 @@ const lastNameErrorMessege = document.querySelector('#error-message-lastName');
 const submitButton = document.querySelector('#submit-button');
 const emailInput = document.querySelector('#Email');
 const emailErrorMessege = document.querySelector('#error-message-email');
+const generalQuery = document.querySelector('#general');
+const supportQuery = document.querySelector('#support');
+const queryErrorMessege = document.querySelectorAll('.error-message-query');
+function checkQuery() {
+    if (generalQuery.checked === false && supportQuery.checked === false) {
+        queryErrorMessege.forEach((element) => element.style.display = 'block');
+    }
+}
 function checkEmail() {
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     const validEmail = emailRegex.test(emailInput.value);
@@ -13,6 +21,7 @@ function checkEmail() {
 }
 function checkInput(e) {
     e.preventDefault();
+    checkQuery();
     checkEmail();
     firstNameInput.value === '' ? firstNameErrorMessage.style.display = 'block' : firstNameErrorMessage.style.display = 'none';
     lastNameInput.value === '' ? lastNameErrorMessege.style.display = 'block' : lastNameErrorMessege.style.display = 'none';
