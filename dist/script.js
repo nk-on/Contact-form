@@ -14,11 +14,15 @@ const descriptionErrorArea = document.querySelector('#description-error-messege'
 function checkDescription() {
     if (descriptionArea.value === '') {
         descriptionErrorArea.style.display = 'block';
+    }else{
+        descriptionErrorArea.style.display = 'block';
     }
 }
 function checkQuery() {
     if (generalQuery.checked === false && supportQuery.checked === false) {
         queryErrorMessege.forEach((element) => element.style.display = 'block');
+    }else{
+        queryErrorMessege.forEach((element) => element.style.display = 'none');
     }
 }
 function checkEmail() {
